@@ -19,7 +19,7 @@ typedef struct CNode {
     struct CNode *next;
 } CNode;
 
-// -------- Part a) Part Delivery and Arm (Queue + Stack) --------
+//Part a) Part Delivery and Arm (Queue + Stack)
 
 // Queue Implementation
 typedef struct {
@@ -67,7 +67,7 @@ char* pop(Stack *s) {
     return s->parts[s->top--];
 }
 
-// -------- Part b) Assembly Storage Unit (Array) --------
+//Part b) Assembly Storage Unit (Array)
 typedef struct {
     char rovers[MAX_SLOTS][MAX_NAME];
     int count;
@@ -84,7 +84,7 @@ void addRover(AssemblyStorage *storage, char *rover) {
     strcpy(storage->rovers[storage->count++], rover);
 }
 
-// -------- Part c) Faulty Rover Tracker (Linked Lists) --------
+//Part c) Faulty Rover Tracker (Linked Lists)
 
 // Singly Linked List Functions
 Node* insertSingly(Node *head, char *name) {
@@ -138,7 +138,7 @@ void traverseDoubly(Node *head) {
     printf("NULL\n");
 }
 
-// -------- Part d) Priority Upgrades (Circular Linked List) --------
+//Part d) Priority Upgrades (Circular Linked List)
 
 CNode* insertCircular(CNode *last, char *name) {
     CNode *newNode = (CNode *)malloc(sizeof(CNode));
@@ -163,7 +163,7 @@ void traverseCircular(CNode *last) {
     printf("(repeat)\n");
 }
 
-// -------- Main Function --------
+//Main Function
 int main() {
     Queue q = {.front = 0, .rear = -1};
     Stack s = {.top = -1};
