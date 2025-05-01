@@ -169,7 +169,7 @@ int main() {
     Stack s = {.top = -1};
     char *parts[MAX_PARTS] = {"Drill", "Wheel", "Camera", "Arm", "Battery", "Sonar"};
 
-    printf("---- Part a) Part Delivery and Arm ----\n");
+    printf("Part a) Part Delivery and Arm\n");
     for (int i = 0; i < MAX_PARTS; i++) {
         enqueue(&q, parts[i]);
     }
@@ -183,7 +183,7 @@ int main() {
         if (part) printf("%s\n", part);
     }
 
-    printf("\n---- Part b) Assembly Storage Unit ----\n");
+    printf("\nPart b) Assembly Storage Unit\n");
     AssemblyStorage storage = {.count = 0};
     char *rovers[] = {"Rov1", "Rov2", "Rov3", "Rov4", "Rov5", "Rov6", "Rov7"};
     for (int i = 0; i < 7; i++) {
@@ -194,7 +194,7 @@ int main() {
         printf("%s\n", storage.rovers[i]);
     }
 
-    printf("\n---- Part c) Faulty Rover Tracker ----\n");
+    printf("\nPart c) Faulty Rover Tracker\n");
     Node *faultyHead = NULL, *repairedHead = NULL;
     faultyHead = insertSingly(faultyHead, "Rov3");
     faultyHead = insertSingly(faultyHead, "Rov6");
@@ -211,7 +211,7 @@ int main() {
     printf("Repaired Rovers (Doubly Linked List):\n");
     traverseDoubly(repairedHead);
 
-    printf("\n---- Part d) Priority Upgrades ----\n");
+    printf("\nPart d) Priority Upgradesn");
     CNode *priorityLast = NULL;
     priorityLast = insertCircular(priorityLast, "Rov1");
     priorityLast = insertCircular(priorityLast, "Rov4");
